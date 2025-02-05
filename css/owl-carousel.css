@@ -1,0 +1,182 @@
+/* Core Owl Carousel CSS */
+
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  touch-action: pan-y;
+  margin-bottom: 50px;
+}
+
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.owl-carousel .owl-item {
+  float: left;
+  padding: 15px;
+}
+
+.testimonials-item {
+  height: 350px; /* Increased total height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-item img {
+  width: 100%;
+  height: 280px; /* Increased image height */
+  object-fit: cover;
+}
+
+.text-content {
+  padding: 10px; /* Reduced padding */
+  width: 100%;
+  text-align: center;
+}
+
+.owl-controls {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Main item container hover effect */
+.testimonials-item {
+  transition: transform 0.3s ease;
+}
+
+.testimonials-item:hover {
+  transform: scale(1.05);
+}
+
+/* Image hover effect */
+.testimonials-item a img {
+  transition: opacity 0.3s ease;
+}
+
+.testimonials-item:hover a img {
+  opacity: 0.8;
+}
+
+/* Text content hover effect */
+.testimonials-item .text-content {
+  transition: color 0.3s ease;
+}
+
+.testimonials-item:hover .text-content h4 {
+  color: #336699; /* Replace with your desired color */
+}
+
+@media (max-width: 768px) {
+  .owl-controls {
+    margin-top: 15px; /* Changed from top: -120px */
+  }
+}
+
+.owl-controls a {
+  color: #336699;
+}
+
+/* Navigation buttons */
+.owl-controls .bg-prev,
+.owl-controls .bg-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #336699;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.owl-controls .bg-prev:before,
+.owl-controls .bg-next:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 2px solid #336699;
+}
+
+.owl-controls .prev,
+.owl-controls .next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 32px;
+  z-index: 11;
+}
+
+.owl-controls .prev {
+  left: 15px;
+}
+
+.owl-controls .next {
+  right: 15px;
+}
+
+.owl-controls .prev.active,
+.owl-controls .prev:active,
+.owl-controls .next.active,
+.owl-controls .next:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* Pagination dots for Owl Carousel */
+.owl-theme .owl-controls .owl-page {
+  cursor: pointer;
+  display: inline-block;
+  zoom: 1;
+  margin: 0 5px; /* Added this line */
+}
+
+.owl-theme .owl-controls .owl-page a {
+  display: block;
+  width: 10px; /* Changed from 12px */
+  height: 10px; /* Changed from 12px */
+  margin: 0; /* Changed from 0px 5px */
+  filter: Alpha(Opacity=50);
+  opacity: 0.5;
+  border-radius: 20px;
+  background: #888; /* Added this line */
+  border: none; /* Changed from border: 2px solid #888 */
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  opacity: 1;
+  display: inline-block;
+  background: #336699; /* Added this line */
+}
+
+/* Hardware acceleration */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}

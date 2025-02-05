@@ -1,0 +1,777 @@
+/*
+
+Vanilla Template
+
+https://templatemo.com/tm-526-vanilla
+
+*/
+
+p {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+section {
+  padding: 25px 0 35px;
+  background: #fff;
+}
+
+body {
+  position: relative; /* we need this for the scrollspy */
+  font-size: 14px;
+}
+
+a {
+  color: #3cc;
+}
+
+a:hover {
+  color: #ff0;
+}
+
+/*----------
+  NAV
+----------*/
+
+/* First add these to the top of your CSS for smooth scrolling */
+html {
+  scroll-padding-top: 60px;
+  scroll-behavior: auto !important;
+}
+
+body {
+  position: relative;
+  font-size: 14px;
+  overflow-x: hidden; /* Add this to prevent horizontal scroll */
+}
+
+/* Add this to account for the fixed navbar */
+main {
+  padding-top: calc(60px + 2rem); /* navbar height + padding */
+}
+
+/* Keep the rest of your navbar styles the same */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.sticky-navbar .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-navbar .nav-item {
+  margin: 0 1rem;
+}
+
+.sticky-navbar .nav-link {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.4rem; /* Much larger text size */
+  letter-spacing: 0.5px; /* Added letter spacing for better readability */
+}
+
+.sticky-navbar .nav-link:hover {
+  color: #ff7d27;
+}
+
+.sticky-navbar .nav-link.active {
+  color: #ff7d27;
+  font-weight: 700;
+}
+
+.primary-button a {
+  display: inline-block;
+  background-color: #7ed957;
+  padding: 15px 24px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.parallax-content {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.hero-logo {
+  width: 100px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.baner-content {
+  padding-top: 30vh;
+  text-align: center;
+  background: #34495e; /* Refined slate gray */
+}
+
+.baner-content h1 {
+  margin-top: 0px;
+  font-size: 72px;
+  color: #ffffff;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: "Fredoka", sans-serif;
+}
+
+/* For the emphasis text */
+.baner-content em {
+  color: #7ed957;
+  font-weight: 600;
+  font-style: normal;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.baner-content em:hover {
+  color: #6bc347; /* Slightly darker shade */
+  text-shadow: 0 0 10px rgba(126, 217, 87, 0.4); /* Subtle glow effect */
+  transform: scale(1.05); /* Slight scale up */
+  display: inline-block; /* Needed for transform to work */
+}
+
+/* For the primary button */
+.primary-button a {
+  background-color: #7ed957;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-button a:hover {
+  background-color: #6bc347; /* Darker shade on hover */
+  box-shadow: 0 5px 15px rgba(126, 217, 87, 0.4); /* Subtle lift effect */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Additional interactive effect for the button */
+.primary-button a:active {
+  transform: translateY(0); /* Returns to original position when clicked */
+  box-shadow: 0 2px 8px rgba(126, 217, 87, 0.3); /* Smaller shadow when pressed */
+}
+
+.baner-content span {
+  display: inline-block;
+  margin-top: -20px;
+  font-weight: 300;
+  font-size: 48px;
+  color: #fff;
+}
+
+.baner-content .primary-button {
+  margin-top: 15px;
+}
+
+.service-content {
+  background: #e8f4f8; /* Soft, airy blue-tinted gray */
+  padding-top: 15vh;
+}
+
+.service-content .left-text h4 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+.service-content .left-text .line-dec {
+  width: 45px;
+  height: 3px;
+  background-color: #ffd93d;
+  margin: 20px 0px 20px 0px;
+}
+
+.service-content .left-text h4 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.service-content .left-text p {
+  color: #2c3e50;
+}
+
+.service-content .left-text ul {
+  padding: 0;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.service-content .left-text ul li {
+  margin: 15px 0px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.service-content .left-text .primary-button {
+  margin: 30px 0px;
+}
+
+.service-content .service-item {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-content .service-item .line-dec {
+  width: 45px;
+  height: 3px;
+  background-color: #ffd93d;
+  margin: 20px auto 15px auto;
+}
+
+/* Projects Section */
+.projects-content {
+  background: #7c8ba1; /* Luminous slate gray */
+  padding-top: 10vh; /* Reduced from 20vh */
+}
+
+.projects-content .item img {
+  width: 100%;
+}
+
+.projects-content .item {
+  margin: 15px;
+}
+
+.projects-content .item .text-content {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-content .item .text-content h4 {
+  margin-top: 0px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.projects-content .item .text-content span {
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffd93d;
+}
+
+.owl-pagination {
+  margin-top: 40px;
+  opacity: 1;
+  display: inline-block;
+}
+
+.owl-page span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0px 5px;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #2c3e50;
+}
+
+/* Tabs Section */
+.tabs-content {
+  background: #2c3e50;
+  padding-top: 8vh;
+}
+
+section {
+  background-color: transparent;
+  padding-bottom: 15px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.tabs {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex; /* Changed to flex */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center; /* Centers items */
+  gap: 10px; /* Consistent spacing between items */
+}
+
+.tabs li {
+  /* Removed display: inline-block since we're using flex */
+  text-align: center;
+  margin: 5px; /* Reduced margin */
+}
+
+.tabs a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 12px; /* Slightly reduced padding */
+  border: 4px solid #fff;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Prevents text wrapping within buttons */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .tabs {
+    padding: 0 10px; /* Add some side padding */
+  }
+
+  .tabs li {
+    margin: 3px; /* Further reduce margins on mobile */
+  }
+
+  .tabs a {
+    font-size: 12px; /* Smaller font size */
+    padding: 6px 10px; /* Smaller padding */
+    border-width: 3px; /* Thinner border */
+  }
+}
+
+/* Rest of your CSS remains the same */
+.tabs a:hover {
+  color: #ffd93d;
+  border-color: #ffd93d;
+}
+
+.tabs .active {
+  border: 4px solid #ffd93d;
+  color: #ffd93d;
+}
+
+.tabgroup div {
+  display: block;
+  width: 100%;
+}
+
+.tabgroup img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.tabgroup p {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 25px;
+  border-radius: 4px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Image container styles */
+.tabgroup div {
+  position: relative; /* For hover effect positioning */
+  overflow: hidden; /* Contains the zoom effect */
+  border-radius: 10px; /* Optional: rounds the corners */
+}
+
+/* Image styles and hover effect */
+.tabgroup img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.5s ease; /* Smooth transition for all effects */
+  position: relative;
+  border-radius: 8px; /* Matches container rounding */
+}
+
+/* Hover effects */
+.tabgroup div:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(1.1) contrast(1.1); /* Enhances colors */
+  box-shadow: 0 0 30px rgba(255, 217, 61, 0.3); /* Golden glow effect matching your yellow accent color */
+}
+
+/* Additional hover effect for the text */
+.tabgroup div:hover p {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Slightly more visible on hover */
+  transform: translateY(-5px); /* Slight upward movement */
+  transition: all 0.5s ease;
+}
+
+/* Make the effects work smoothly on mobile */
+@media (max-width: 768px) {
+  .tabgroup img {
+    width: 90%; /* Slightly larger on mobile */
+  }
+
+  .tabgroup div:hover img {
+    transform: scale(1.03); /* Smaller zoom on mobile to prevent overflow */
+  }
+
+  .tabgroup div:hover p {
+    transform: translateY(-3px); /* Smaller movement on mobile */
+  }
+}
+
+/* Ensure smooth transitions even when not hovering */
+.tabgroup p {
+  transition: all 0.5s ease;
+}
+
+/* Contact Section - Creates an inviting space for user interaction */
+.contact-content {
+  background: #cbd5e1; /* Elegant medium gray */
+  padding-top: 16vh;
+  padding-bottom: 8vh; /* Creates breathing room at the bottom */
+  margin: 0; /* Removes any default margins */
+  width: 100%; /* Ensures full width coverage */
+  position: relative; /* Establishes positioning context */
+  overflow: hidden; /* Contains all content within bounds */
+}
+
+/* Ensures clean transitions between sections */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form {
+  background-color: rgba(44, 62, 80, 0.9);
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  height: 100%;
+  min-height: 390px;
+  border-radius: 4px;
+}
+
+.cards-container {
+  background-color: rgba(44, 62, 80, 0.9);
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  height: 100%;
+  min-height: 390px;
+  border-radius: 4px;
+}
+
+#contact input {
+  border-radius: 3px;
+  padding-left: 15px;
+  font-size: 13px;
+  color: #232323;
+  background-color: rgba(250, 250, 250, 1);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#contact textarea {
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #232323;
+  background-color: rgba(250, 250, 250, 1);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  height: 165px;
+  max-height: 220px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#contact button {
+  display: inline-block;
+  background-color: #ff7d27;
+  padding: 15px 24px;
+  width: 100%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* Cards Styling */
+.cards-container .row {
+  height: 100%;
+  margin: 0;
+}
+
+.cards-container .col-6 {
+  padding: 10px;
+}
+
+.card {
+  height: 150px;
+  background-color: white;
+  transition: transform 0.2s ease;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #2c5282;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a365d;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Added responsive padding adjustments */
+@media (min-width: 768px) {
+  .contact-form,
+  .cards-container {
+    margin: 0 15px 30px 15px;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #282b2f;
+  padding: 70px 0px;
+}
+
+footer .primary-button {
+  margin-bottom: 30px;
+}
+
+footer ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0px 4px;
+}
+
+footer ul li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #e60023; /* Bright and visible on dark backgrounds */
+  font-size: 4rem; /* Increased size for better visibility */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+footer ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 3px solid #e60023; /* Circle color for consistency */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: -1; /* Keeps the circle behind the icon/text */
+}
+
+footer ul li a:hover {
+  transform: scale(1.2); /* Slightly larger zoom effect for emphasis */
+}
+
+footer ul li a:hover::before {
+  width: 4rem; /* Larger circle width */
+  height: 4rem; /* Matches the width for a perfect circle */
+}
+
+footer p {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 15px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 0px;
+}
+
+footer em {
+  color: #ff8e43;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.disclosure {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.brand-name {
+  color: #ff7d27;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .baner-content h1 {
+    font-size: 50px !important; /* Adjust as needed */
+  }
+
+  .baner-content span {
+    font-size: 24px;
+  }
+}
+
+.baner-content h1 {
+  margin-top: 0px;
+  font-size: 128px;
+  color: #ffffff;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: "Fredoka", sans-serif;
+}
+
+/* For the emphasis text */
+.baner-content em {
+  color: #7ed957;
+  font-weight: 600;
+  font-style: normal;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.baner-content em:hover {
+  color: #6bc347; /* Slightly darker shade */
+  text-shadow: 0 0 10px rgba(126, 217, 87, 0.4); /* Subtle glow effect */
+  transform: scale(1.05); /* Slight scale up */
+  display: inline-block; /* Needed for transform to work */
+}
+
+.baner-content span {
+  font-size: 24px;
+}
+
+.baner-content .primary-button {
+  margin-top: 15px;
+}
+
+.service-content {
+  padding-top: 5vh;
+  text-align: center;
+}
+
+.service-content .left-text .line-dec {
+  width: 45px;
+  height: 3px;
+  background-color: #ff7d27;
+  margin: 20px auto 20px auto;
+}
+
+.service-content .left-text ul {
+  text-align: left;
+}
+
+.service-content .service-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px 30px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+/* Add these new styles after your existing CSS */
+.testimonials-item {
+  background: #fff;
+  margin: 10px;
+  height: 300px; /* Fixed height for all cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials-item a {
+  height: 200px; /* Fixed height for image container */
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.testimonials-item a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This maintains aspect ratio while filling space */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.testimonials-item .text-content {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-item h4 {
+  margin: 0;
+  line-height: 1.4;
+}
