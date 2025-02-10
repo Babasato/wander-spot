@@ -586,6 +586,10 @@ section {
   padding: 0;
 }
 
+#contact {
+  scroll-margin-top: 80px; /* Just the scroll adjustment */
+}
+
 .contact-form {
   background-color: rgba(44, 62, 80, 0.9);
   padding: 40px 30px;
@@ -692,13 +696,11 @@ section {
 }
 
 /* Added responsive padding adjustments */
-@media (min-width: 768px) {
-  .contact-form,
-  .cards-container {
-    margin: 0 15px 30px 15px;
+@media (max-width: 768px) {
+  #contact {
+    scroll-margin-top: 60px;
   }
 }
-
 footer {
   text-align: center;
   background-color: #282b2f;
