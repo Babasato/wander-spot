@@ -53,3 +53,31 @@ jQuery(document).ready(function ($) {
     itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggle = document.querySelector(".nav-item.dropdown");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  let timeoutId;
+
+  dropdownToggle.addEventListener("mouseenter", function () {
+    clearTimeout(timeoutId);
+    dropdownMenu.style.display = "block";
+  });
+
+  dropdownToggle.addEventListener("mouseleave", function () {
+    timeoutId = setTimeout(() => {
+      if (!dropdownMenu.matches(":hover")) {
+        dropdownMenu.style.display = "none";
+      }
+    }, 200);
+  });
+
+  dropdownMenu.addEventListener("mouseenter", function () {
+    clearTimeout(timeoutId);
+  });
+
+  dropdownMenu.addEventListener("mouseleave", function () {
+    dropdownMenu.style.display = "none";
+  });
+});
