@@ -55,20 +55,38 @@ jQuery(document).ready(function ($) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Select elements with error handling
   const dropdownToggle = document.querySelector(".nav-item.dropdown");
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
-  let timeoutId;
+  if (!dropdownToggle || !dropdownMenu) {
+    console.error("Dropdown elements not found");
+    return;
+  }
 
-  dropdownToggle.addEventListener("mouseenter", function () {
+  // Set initial state
+  dropdownMenu.style.display = "none";
+  let timeoutId = null;
+
+  // Helper function to handle display
+  const showDropdown = () => {
     clearTimeout(timeoutId);
     dropdownMenu.style.display = "block";
-  });
+    dropdownMenu.setAttribute("aria-expanded", "true");
+  };
 
+  const hideDropdown = () => {
+    dropdownMenu.style.display = "none";
+    dropdownMenu.setAttribute("aria-expanded", "false");
+  };
+
+  // Event listeners
+  dropdownToggle.addEventListener("mouseenter", showDropdown);
+  
   dropdownToggle.addEventListener("mouseleave", function () {
     timeoutId = setTimeout(() => {
       if (!dropdownMenu.matches(":hover")) {
-        dropdownMenu.style.display = "none";
+        hideDropdown();
       }
     }, 200);
   });
@@ -77,7 +95,18 @@ document.addEventListener("DOMContentLoaded", function () {
     clearTimeout(timeoutId);
   });
 
-  dropdownMenu.addEventListener("mouseleave", function () {
-    dropdownMenu.style.display = "none";
+  dropdownMenu.addEventListener("mouseleave", hideDropdown);
+
+  // Add keyboard accessibility
+  dropdownToggle.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      dropdownMenu.style.display === "none" ? showDropdown() : hideDropdown();
+    }
   });
+
+  // Add proper ARIA attributes
+  dropdownToggle.setAttribute("role", "button");
+  dropdownToggle.setAttribute("aria-haspopup", "true");
+  dropdownMenu.setAttribute("aria-expanded", "false");
 });
