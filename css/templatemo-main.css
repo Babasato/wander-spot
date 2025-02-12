@@ -719,40 +719,51 @@ footer ul {
 
 footer ul li {
   display: inline-block;
-  margin: 0px 4px;
+  margin: 0px 14px; /* Increased margin for better spacing */
 }
 
 footer ul li a {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  color: #e60023; /* Bright and visible on dark backgrounds */
-  font-size: 4rem; /* Increased size for better visibility */
+  font-size: 2.5rem; /* Slightly reduced for better proportions */
   text-align: center;
   transition: transform 0.3s ease;
-}
-
-footer ul li a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 3px solid #e60023; /* Circle color for consistency */
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease;
-  z-index: -1; /* Keeps the circle behind the icon/text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Facebook specific styles */
+footer ul li a .fa-facebook-f {
+  color: #ffffff;
+}
+
+footer ul li a:has(.fa-facebook-f) {
+  background-color: #1877f2; /* Official Facebook blue */
+}
+
+/* Pinterest specific styles */
+footer ul li a .fa-pinterest-p {
+  color: #ffffff;
+}
+
+footer ul li a:has(.fa-pinterest-p) {
+  background-color: #e60023; /* Official Pinterest red */
+}
+
+/* Hover effects */
 footer ul li a:hover {
-  transform: scale(1.2); /* Slightly larger zoom effect for emphasis */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
-footer ul li a:hover::before {
-  width: 4rem; /* Larger circle width */
-  height: 4rem; /* Matches the width for a perfect circle */
+/* Remove the previous ::before pseudo-element styles since we're using backgrounds now */
+footer ul li a::before {
+  display: none;
 }
 
 footer p {
